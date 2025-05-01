@@ -15,6 +15,7 @@
         }
         body {
             font-family: Arial, sans-serif;
+            font-size: 200%; /* Lowered font size of everything by 75% */
         }
 
         /* Scroll Snap */
@@ -77,6 +78,7 @@
             padding: 10px;
             text-align: center;
             transition: all 0.3s ease-in-out;
+            font-size: 50%; /* Lowered menu font size by 150% */
         }
 
         #menu.fixed {
@@ -96,6 +98,33 @@
         #menu a:hover {
             color: #46db2f;
         }
+        #shadowBox {
+        }
+
+    .rainbow {
+        text-align: center;
+        text-decoration: underline;
+        font-size: 400%; /* Ensure the heading is larger than the text below */
+        font-family: monospace;
+        letter-spacing: 5px;
+        }
+    .rainbow_text_animated {
+        background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        animation: rainbow_animation 10s linear infinite;
+        background-size: 400% 100%;
+        }
+
+    @keyframes rainbow_animation {
+         0% {
+            background-position: 400% 0; /* Start from the right */
+        }
+        100% {
+            background-position: 0 0; /* Move to the left */
+        }
+    }
     </style>
 </head>
 <body>
@@ -108,9 +137,11 @@
     </div>
     <main>
         <section id="about">
-            <h1>Welcome to Trigonometry.bad!</h1>
+            <div id="shadowBox">
+                <h1 class="rainbow rainbow_text_animated"> Welcome to Trigonometry.bad!</h1>
+            </div>
             <br>
-            <p>My name is Sam. I'm 19 and I am a student at Nottingham Trent University. I am studying software engineering!</p>
+            <p class="rainbow_text_animated">My name is Sam. I'm 19 and I am a student at Nottingham Trent University. I am studying software engineering!</p>
         </section>
         <section id="trig-info">
             <h2>What is Trigonometry?</h2>
