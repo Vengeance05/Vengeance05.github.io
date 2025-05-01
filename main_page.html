@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trigonometry.bad</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            height: 100%;
+            scroll-behavior: smooth; /* Smooth scrolling */
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Scroll Snap */
+        main {
+            scroll-snap-type: y mandatory; /* Enable vertical scroll snapping */
+            height: 100vh;
+            overflow-y: scroll; /* Enable scrolling */
+        }
+
+        /* Full-Screen Sections with Background Images */
+        section {
+            scroll-snap-align: start; /* Snap to the start of each section */
+            height: 100vh; /* Full viewport height */
+            display: flex; /* Center content with flexbox */
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            color: #fff; /* White text for contrast */
+        }
+
+        #about {
+            background-image: url('images/code_on_a_old_computer_lffp3c7rzygp29icz6us_2.png'); /* Replace with your image file */
+            background-size: cover; /* Make the image cover the entire section */
+        }
+
+        #trig-info {
+            background-image: url('/images/mathematician_from_3rd_century_bc_2vqm4qw1jmwm9qtw111x_1.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        #trig-image {
+            background-image: url('/images/chalkboard_close__65fdaj59d25f4wbrvdel_3.png');
+            background-size: cover;
+
+        }
+
+        #sohcahtoa {
+            background-image: url('/images/maths_background_image_75nf2973sftu0wjjpjp3_2.png');
+            background-size: cover;
+        }
+
+        #getanswer {
+            background-image: url('/images/maths_background_image_cqi41ng5lnhqf19fp3ik_3.png');
+            background-size: cover;
+        }
+
+        #Examples {
+            background-image: url('/images/maths_background_image_lh0so8f5goudno8fe9ex_2.png');
+            background-size: cover;
+        }
+
+        #menu {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+        }
+
+        #menu.fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        #menu a {
+            color: #6a6a6a;
+            margin: 0 15px;
+            text-decoration: none;
+            transition: color 0.3s ease, background 0.3s ease;
+        }
+
+        #menu a:hover {
+            color: #46db2f;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <a href="#about">About me</a>
+        <a href="#trig-info">What is Trigonometry?</a>
+        <a href="#trig-image">Visualizing Trigonometry</a>
+        <a href="#sohcahtoa">SohCahToa</a>
+        <a href="#getanswer">Getting an answer</a>
+    </div>
+    <main>
+        <section id="about">
+            <h1>Welcome to Trigonometry.bad!</h1>
+            <br>
+            <p>My name is Sam. I'm 19 and I am a student at Nottingham Trent University. I am studying software engineering!</p>
+        </section>
+        <section id="trig-info">
+            <h2>What is Trigonometry?</h2>
+            <p>Trigonometry studies relationships between the sides and angles of triangles. It originated in the Hellenistic world for astronomical studies.</p>
+        </section>
+        <section id="trig-image">
+            <h2>Visualizing Trigonometry</h2>
+            <img src="images/Trigonometry.png" alt="Right Angle Triangle" style="max-width: 100%; height: auto;">
+            <p>To begin understanding Trigonometry we need to understand the main ideas of a triangle. The 3 different sides are called the Hypotenuse, Opposite and Adjacent. The Opposite angle and Adjacent angle change depending on where the angle you are trying to find is.</p>
+        </section>
+        <section id="sohcahtoa">
+            <h2>SohCahToa</h2>
+            <br>
+            <p>SohCahToa is a device we use to remember what trigonometric ratio to use. Either: Sin, Cos or Tan. 
+            <br>
+            <br>
+            Simply Sin is <b>O</b>pposite over <b>H</b>ypotenuse, Cos is <b>A</b>djacent over <b>H</b>ypotenuse and Tan is <b>O</b>pposite over <b>A</b>djacent.
+            <br>
+            <br>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/HggnA2NTMmM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        </section>
+        <section id="getanswer">
+            <h2>Getting an answer</h2>
+            <br>
+            <p>Now that we know what Trigonometry is and how to use SohCahToa we can now find the answer to the angle we are looking for. 
+            <br>
+            <br>
+            We can use the formula: 
+            <br>
+            <br>
+            <b>sin(θ) = Opposite / Hypotenuse</b>
+            <br>
+            <b>cos(θ) = Adjacent / Hypotenuse</b>
+            <br>
+            <b>tan(θ) = Opposite / Adjacent</b>
+            <br>
+        </section>
+        <section id="Examples">
+            <h2>Example Questions</h2>
+            <br>
+            <p>Now that we know how to use Trigonometry we can now answer some example questions.</p>
+            <br>
+            <b>Example 1:</b>
+            <br>
+            <br>
+            <b>Question:</b> Find the angle of a triangle with an Opposite of 5 and a Hypotenuse of 13.
+            <br>
+            <br>
+            <button onclick="toggleAnswer('answer1')">Show/Hide Answer</button>
+            <br>
+            <div id="answer1" style="display: none;">
+                <b>Answer:</b> sin(θ) = 5 / 13
+            </div>
+            <br>
+            <b>Example 2:</b>
+            <br>
+            <br>
+            <b>Question:</b> Find the angle of a triangle with an Adjacent of 7 and a Hypotenuse of 25.
+            <br>
+            <br>
+            <button onclick="toggleAnswer('answer2')">Show/Hide Answer</button>
+            <br>
+            <div id="answer2" style="display: none;">
+                <b>Answer:</b> cos(θ) = 7 / 25
+            </div>
+        </section>
+        <section id="contact">
+            <!-- Contact section content -->
+        </section>
+    </main>
+    <script>
+        window.addEventListener('scroll', function() {
+            var menu = document.getElementById('menu');
+            var aboutSection = document.getElementById('about');
+            var aboutSectionHeight = aboutSection.offsetHeight;
+
+            if (window.scrollY >= aboutSectionHeight) {
+                menu.classList.add('fixed');
+            } else {
+                menu.classList.remove('fixed');
+            }
+        });
+
+        document.querySelectorAll('#menu a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                var targetId = this.getAttribute('href').substring(1);
+                var targetElement = document.getElementById(targetId);
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        function toggleAnswer(answerId) {
+            var answerElement = document.getElementById(answerId);
+            if (answerElement.style.display === "none") {
+                answerElement.style.display = "block";
+            } else {
+                answerElement.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
